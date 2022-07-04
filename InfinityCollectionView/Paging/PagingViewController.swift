@@ -170,10 +170,6 @@ class PagingViewController: UIViewController {
             cell.contentConfiguration = configuration
         }
     }
-    
-    private func addInfinityOrthogonalScrolling(to section: Int, collectionView: UICollectionView) {
-        
-    }
 }
 
 extension PagingViewController: UICollectionViewDelegate {
