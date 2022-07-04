@@ -2,4 +2,4 @@
 
 Infinity Orthogonal Scrolling on UICollectionViewCompositionalLayout
 
-![](video.webp)
+[Video (webp)](video.webp)
