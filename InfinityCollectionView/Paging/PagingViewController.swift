@@ -198,8 +198,8 @@ extension PagingViewController: UICollectionViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !ProcessInfo.processInfo.isDisabledInfinityScrolling {
-            if scrollView.isEqual(collectionView) {
+        if scrollView.isEqual(collectionView) {
+            if !ProcessInfo.processInfo.isDisabledInfinityScrolling {
                 let cellHeight: CGFloat = collectionView.bounds.height
                 
                 guard collectionView.contentSize.height >= cellHeight else { return }
