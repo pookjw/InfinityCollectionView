@@ -76,7 +76,8 @@ class PagingViewController: UIViewController {
         requstTask = .detached { [weak self] in
             await self?.viewModel?.request()
             await MainActor.run { [weak self] in
-                guard let collectionView: UICollectionView = self?.collectionView else { return
+                guard let collectionView: UICollectionView = self?.collectionView else {
+                    return
                 }
                 
                 (0..<collectionView.numberOfSections).forEach { section in
