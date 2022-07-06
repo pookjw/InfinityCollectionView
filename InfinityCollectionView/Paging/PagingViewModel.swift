@@ -68,8 +68,8 @@ actor PagingViewModel {
         }
         
         return await withCheckedContinuation { continuation in
-            dataSource.apply(snapshot, animatingDifferences: false) {
-                continuation.resume()
+            dataSource.applySnapshotUsingReloadData(snapshot) {
+                continuation.resume(returning: ())
             }
         }
     }
